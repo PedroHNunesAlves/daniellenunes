@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --body-color: #ededf2;
+  --green-color: #96b49c;
+  --secundary-color: #5b5847;
+  --blue-color: #172c3c;
+  --white-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--green-color);
+  padding: 50px 40px;
+}
+
+.title1 {
+  font-weight: 500;
+}
+
+.nav-header a {
+  color: var(--white-color);
+  font-size: 18px;
+  transition: 0.2s ease-in-out;
+  font-weight: 700;
+}
+
+.nav-header ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-header li {
+  margin: 0px 15px;
+}
+
+.nav-header li a:hover {
+  color: var(--secundary-color);
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.sobre {
+  display: flex;
+  width: 100%;
+}
+
+.danielle_img {
+  display: flex;
+  width: 50%;
+  background-color: var(--secundary-color);
+}
+
+.sobreContent {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 10px;
+}
+
+.sobreContent h1 {
+  color: var(--blue-color);
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.job {
+  color: var(--secundary-color);
+  font-size: 25px;
+  font-weight: 800;
+}
