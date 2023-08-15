@@ -6,6 +6,7 @@
   --secundary-color: #5b5847;
   --blue-color: #172c3c;
   --white-color: #ffffff;
+  --gray-color: #d9d9d9;
 }
 
 * {
@@ -13,6 +14,10 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
+}
+
+a {
+  color: #000;
 }
 
 html,
@@ -32,6 +37,11 @@ header {
   align-items: center;
   background-color: var(--green-color);
   padding: 50px 40px;
+}
+
+#sandwich-menu {
+  display: none;
+  font-size: 30px;
 }
 
 .title1 {
@@ -64,7 +74,7 @@ header {
   right: 20px;
 }
 
-.sobre {
+#sobre {
   display: flex;
   width: 100%;
 }
@@ -73,6 +83,13 @@ header {
   display: flex;
   width: 50%;
   background-color: var(--secundary-color);
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.danielle_img img {
+  outline: 3px solid black;
+  border-radius: 50%;
 }
 
 .sobreContent {
@@ -92,4 +109,53 @@ header {
   color: var(--secundary-color);
   font-size: 25px;
   font-weight: 800;
+}
+
+#utilidade {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0;
+  background-color: var(--gray-color);
+}
+
+.titleUtilit {
+  text-align: center;
+  font-size: 30px;
+  color: var(--blue-color);
+}
+
+.beneficios ul {
+  display: flex;
+  margin-top: 70px;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0px 100px;
+}
+
+.beneficios ul li {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+@media (max-width: 944px) {
+  header {
+    padding: 50px 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  #sandwich-menu {
+    display: block;
+  }
+
+  .nav-header {
+    display: none;
+  }
+}
+
+@media (max-width: 944px) {
+  .logo {
+    font-size: 12px;
+  }
 }
