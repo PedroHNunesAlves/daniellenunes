@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Phudu&display=swap");
 
 :root {
   --body-color: #ededf2;
@@ -18,6 +19,10 @@
 
 a {
   color: #000;
+}
+
+ul {
+  list-style: none;
 }
 
 html,
@@ -57,7 +62,6 @@ header {
 
 .nav-header ul {
   display: flex;
-  list-style: none;
 }
 
 .nav-header li {
@@ -77,6 +81,7 @@ header {
 #sobre {
   display: flex;
   width: 100%;
+  padding-bottom: 120px;
 }
 
 .danielle_img {
@@ -115,8 +120,9 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 100px 0;
+  padding: 150px 0;
   background-color: var(--gray-color);
+  margin-top: -120px;
 }
 
 .titleUtilit {
@@ -136,6 +142,98 @@ header {
 .beneficios ul li {
   font-weight: bold;
   font-size: 30px;
+}
+
+#publico {
+  background-color: var(--green-color);
+  padding: 30px 10px;
+}
+
+.publicoTitle h1 {
+  padding: 30px;
+  font-size: 50px;
+}
+
+.publicoContent {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+}
+
+.imgPublico {
+  outline: 3px solid black;
+  border-radius: 50%;
+  border: 3px solid var(--white-color);
+  box-shadow: 20px -15px black;
+}
+
+.leftCard,
+.rightCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+:is(.leftCard, .rightCard) :is(p) {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+#contato {
+  background-color: var(--blue-color);
+  padding: 30px 20px;
+}
+
+#contato :is(h1, h2) {
+  color: var(--white-color);
+}
+
+.contatoh1 {
+  padding: 50px 0;
+}
+
+.contatoh1 h1 {
+  font-size: 40px;
+  font-family: "Phudu";
+  font-weight: 700;
+}
+
+.contatoBlock {
+  display: flex;
+}
+
+.contatoBlock article {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.contatoBlock aside {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.contatoBlock aside img {
+  width: 80%;
+}
+
+.social-medias {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+#insta {
+  margin-top: 5px;
+}
+
+.social-medias ul {
+  display: flex;
 }
 
 @media (max-width: 944px) {
@@ -158,4 +256,17 @@ header {
   .logo {
     font-size: 12px;
   }
+}
+
+::-webkit-scrollbar {
+  background-color: var(--green-color);
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secundary-color);
+}
+
+::selection {
+  background-color: var(--gray-color);
 }
