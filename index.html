@@ -6,6 +6,7 @@
     <title>Danielle Nunes | Vistoriadora de Imóveis</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="shortcut icon" href="./assets/danielle.jpg" type="image/x-icon" />
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="whatsapp-button">
@@ -17,6 +18,7 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
       />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </div>
     <header>
       <div class="logo">
@@ -24,15 +26,19 @@
           ><h3><span class="title1">Danielle Nunes </span> | Vistoriadora de Imóveis</h3></a
         >
       </div>
-      <nav class="nav-header">
+      <nav class="nav-header" id="headerMobile">
         <ul>
-          <li><a href="index.html">Sobre</a></li>
           <li><a href="#utilidade">Utilidade</a></li>
           <li><a href="#publico">Público Alvo</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
+      <div id="iconHeader">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </header>
+
+    <div id="overlay"></div>
 
     <main>
       <section id="sobre">
@@ -60,9 +66,9 @@
         </div>
         <div class="beneficios">
           <ul>
-            <li>+ Segurança</li>
-            <li>+ Eficiência</li>
-            <li>+ Controle</li>
+            <li><i class="fa-solid fa-lock"></i> Segurança</li>
+            <li><i class="fa-solid fa-gauge-simple-high"></i> Eficiência</li>
+            <li><i class="fa-solid fa-key"></i> Controle</li>
           </ul>
         </div>
       </section>
@@ -73,22 +79,29 @@
         </div>
         <div class="publicoContent">
           <div class="leftCard">
-            <img src="./assets/house.png" alt="" class="imgPublico" width="280px" />
+            <img src="./assets/house.png" alt="" class="imgPublico" width="280px" data-aos="fade-up" />
             <p>Agentes Imobiliários</p>
           </div>
           <div class="rightCard">
-            <img src="./assets/field.png" alt="" class="imgPublico" width="280px" />
+            <img src="./assets/field.png" alt="" class="imgPublico" width="280px" data-aos="fade-down" />
             <p>Compradores de imóveis</p>
           </div>
         </div>
       </section>
 
       <section id="contato">
+        <div class="dani_img_mobile">
+          <img src="./assets/AnimatedSVG.svg" width="200px" />
+        </div>
+
         <div class="contatoh1">
           <h1>Gostaria de contratar uma vistoria em Belo Horizonte ou região?</h1>
         </div>
 
         <div class="contatoBlock">
+          <aside class="dani_img">
+            <img src="./assets/AnimatedSVG.svg" />
+          </aside>
           <article>
             <h2>Fique à vontade para me contactar nos canais abaixo!</h2>
             <div class="social-medias">
@@ -102,11 +115,12 @@
               </ul>
             </div>
           </article>
-          <aside class="dani_img">
-            <img src="./assets/AnimatedSVG.svg" />
-          </aside>
         </div>
       </section>
     </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

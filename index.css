@@ -25,6 +25,9 @@ ul {
   list-style: none;
 }
 
+i {
+  margin-right: 5px;
+}
 html,
 body {
   scroll-behavior: smooth;
@@ -42,15 +45,20 @@ header {
   align-items: center;
   background-color: var(--green-color);
   padding: 50px 40px;
+  z-index: 999;
 }
 
-#sandwich-menu {
+#iconHeader {
   display: none;
   font-size: 30px;
 }
 
 .title1 {
   font-weight: 500;
+}
+
+.nav-header active {
+  display: none;
 }
 
 .nav-header a {
@@ -93,6 +101,9 @@ header {
 }
 
 .danielle_img img {
+  display: flex;
+  justify-content: center;
+  width: 400px;
   outline: 3px solid black;
   border-radius: 50%;
 }
@@ -123,6 +134,7 @@ header {
   padding: 150px 0;
   background-color: var(--gray-color);
   margin-top: -120px;
+  margin-bottom: 120px;
 }
 
 .titleUtilit {
@@ -136,17 +148,19 @@ header {
   margin-top: 70px;
   list-style: none;
   justify-content: space-between;
-  padding: 0px 100px;
+  padding: 0px 40px;
 }
 
 .beneficios ul li {
   font-weight: bold;
+  padding: 0px 0;
   font-size: 30px;
 }
 
 #publico {
   background-color: var(--green-color);
-  padding: 30px 10px;
+  padding: 120px 10px;
+  margin-top: -180px;
 }
 
 .publicoTitle h1 {
@@ -188,6 +202,15 @@ header {
   padding: 30px 20px;
 }
 
+.dani_img_mobile img {
+  width: 300px;
+}
+
+.dani_img_mobile {
+  display: none;
+  width: 100%;
+}
+
 #contato :is(h1, h2) {
   color: var(--white-color);
 }
@@ -219,11 +242,12 @@ header {
 }
 
 .contatoBlock aside img {
-  width: 80%;
+  width: 350px;
 }
 
 .social-medias {
   display: flex;
+  justify-content: center;
   align-items: center;
   padding-top: 10px;
 }
@@ -236,25 +260,178 @@ header {
   display: flex;
 }
 
+.social-medias ul li {
+  padding: 10px;
+}
+
 @media (max-width: 944px) {
   header {
-    padding: 50px 15px;
+    padding: 10px 15px;
+  }
+
+  #iconHeader {
+    padding: 5px;
+  }
+
+  #sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  .danielle_img {
+    display: flex;
+    width: 100%;
+  }
+
+  .danielle_img img {
+    width: 300px;
+  }
+
+  .sobreContent {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 10px;
+  }
+
+  .sobreContent :is(h1, p) {
+    text-align: center;
+    margin: 8px 12px;
+  }
+
+  #utilidade {
+    padding: 235px 0 50px 0px;
+    margin-top: -200px;
+  }
+
+  .beneficios ul {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .beneficios ul li {
+    padding: 40px 0;
+  }
+
+  .titleUtilit h1 {
+    padding-bottom: 50px;
+  }
+
+  .titleUtilit,
+  .beneficios {
+    margin-top: -80px;
+  }
+
+  #publico {
+    padding: 120px 0;
+    text-align: center;
+  }
+
+  .publicoContent {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+
+  #contato {
+    padding: 120px 10px 50px 10px;
+  }
+
+  .contatoBlock aside {
+    display: none;
+  }
+
+  .contatoBlock :is(.social-medias, h2) {
+    display: flex;
+    text-align: center;
+    width: 200%;
+    align-items: center;
+  }
+
+  .dani_img_mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 @media (max-width: 900px) {
-  #sandwich-menu {
+  #iconHeader {
     display: block;
+    color: white;
+    font-size: 40px;
+  }
+
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 970;
   }
 
   .nav-header {
-    display: none;
+    right: -100%;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 55vw;
+    background-color: rgb(216, 216, 216);
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-header.active {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 55vw;
+    z-index: 1000;
+    height: 100vh;
+    flex-direction: column;
+    background-color: rgb(216, 216, 216);
+    overflow: hidden;
+    transition: all 0.4s;
+  }
+
+  .nav-header.active ul {
+    height: 110vh;
+    flex-direction: column;
+    margin-top: 200px;
+  }
+
+  .nav-header.active ul li {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .nav-header.active ul li a {
+    color: #000;
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 @media (max-width: 944px) {
   .logo {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 550px) {
+  .publicoContent :is(img) {
+    width: 200px;
   }
 }
 
