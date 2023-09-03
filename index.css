@@ -97,13 +97,12 @@ header {
   width: 50%;
   background-color: var(--secundary-color);
   justify-content: center;
+  align-items: center;
   padding: 20px 0;
 }
 
 .danielle_img img {
-  display: flex;
-  justify-content: center;
-  width: 400px;
+  max-width: 400px;
   outline: 3px solid black;
   border-radius: 50%;
 }
