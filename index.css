@@ -394,7 +394,7 @@ header {
     position: absolute;
     right: 0;
     top: 0;
-    width: 55vw;
+    width: 60vw;
     z-index: 1000;
     height: 100vh;
     flex-direction: column;
