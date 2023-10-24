@@ -8,6 +8,7 @@
   --blue-color: #172c3c;
   --white-color: #ffffff;
   --gray-color: #d9d9d9;
+  --third-color: #d9d9d9df;
 }
 
 * {
@@ -34,7 +35,7 @@ body {
 }
 
 body {
-  background-color: var(--body-color);
+  background-color: var(--third-color);
 }
 
 header {
@@ -43,8 +44,8 @@ header {
   top: 0;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--green-color);
-  padding: 50px 40px;
+  background-color: var(--blue-color);
+  padding: 20px 40px;
   z-index: 999;
 }
 
@@ -95,7 +96,7 @@ header {
 .danielle_img {
   display: flex;
   width: 50%;
-  background-color: var(--secundary-color);
+  background-color: var(--gray-color);
   justify-content: center;
   align-items: center;
   padding: 20px 0;
